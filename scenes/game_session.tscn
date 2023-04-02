@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/game_session.gd" type="Script" id=1]
+[ext_resource path="res://scenes/grid.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/minimap.tscn" type="PackedScene" id=4]
+
+[node name="GameSession" type="Node2D"]
+position = Vector2( 0, -1 )
+script = ExtResource( 1 )
+no_of_players = 3
+
+[node name="Grid" parent="." instance=ExtResource( 2 )]
+size = Vector2( 32, 32 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="Minimap" parent="HUD" instance=ExtResource( 4 )]

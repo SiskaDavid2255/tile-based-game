@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/custom_game_menu.gd" type="Script" id=1]
+
+[node name="CustomGameMenu" type="MarginContainer"]
+anchor_left = 0.391
+anchor_top = 0.5
+anchor_right = 0.391
+anchor_bottom = 0.5
+margin_left = -0.384033
+margin_right = 268.616
+margin_bottom = 100.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 269.0
+margin_bottom = 128.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 269.0
+margin_bottom = 14.0
+text = "Number of opponents"
+
+[node name="OpponentsCountBtn" type="OptionButton" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 269.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 42.0
+margin_right = 269.0
+margin_bottom = 56.0
+text = "Map size"
+
+[node name="MapSizeBtn" type="OptionButton" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 269.0
+margin_bottom = 80.0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_top = 84.0
+margin_right = 269.0
+margin_bottom = 104.0
+text = "Start game"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+margin_top = 108.0
+margin_right = 269.0
+margin_bottom = 128.0
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

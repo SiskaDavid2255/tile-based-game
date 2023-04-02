@@ -1,0 +1,14 @@
+extends Node
+
+signal turn_ended
+signal round_ended
+signal end_turn_pressed
+signal tile_clicked_left
+signal tile_clicked_right
+signal tile_selected
+signal new_player_selected
+signal players_generated
+signal tile_size_changed
+signal new_game_initialized
+signal grid_generated
+signal cam_moved
